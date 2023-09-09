@@ -1,0 +1,60 @@
+.bottle-item {
+    margin-bottom: 32px;
+    background: #B0E0E9;
+
+    border-radius: 8px;
+}
+
+.bottle-item-msg {
+    width: 90%;
+    font-size: 16px;
+    margin: 10px;
+    padding: 16px;
+
+    border-radius: 8px;
+}
+
+.bottle-item-msg:disabled {
+    resize: none;
+    background: white;
+    color: black;
+    border-width: 1px;
+    border-color: #f0f0f0;
+}
+
+.bottle-item-buttons {}
+
+.bottle-item-footer {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottle-item-expiration {
+    display: flex;
+    align-items: center;
+}
+
+.bottle-item-edit-button {
+    width: 64px;
+    height: 32px;
+    margin: 8px;
+
+    font-size: 16px;
+
+    border: none;
+    border-radius: 8px;
+}
+
+.bottle-item-send-button {
+    width: 64px;
+    height: 32px;
+    margin: 8px;
+
+    font-size: 16px;
+
+    border: none;
+    border-radius: 8px;
+}
