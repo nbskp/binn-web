@@ -11,7 +11,7 @@ type BottleItemProps = {
 
 export const BottleItem: React.FC<BottleItemProps> = ({ bottle, changeMessage, sendBottle }) => {
     const [isEditable, setIsEditable] = useState<boolean>(false);
-    const textAreaRef = useRef(null);
+    const textAreaRef = useRef<HTMLTextAreaElement>(null);
     useEffect(() => {
         if (textAreaRef.current == null) {
             return
