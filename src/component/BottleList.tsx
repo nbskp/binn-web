@@ -15,10 +15,10 @@ export const BottleList: React.FC<BottleListProps> = ({ bottles, changeMessage, 
                                                       key={bottle.id}
                                                       bottle={bottle}
                                                       changeMessage={changeMessage}
-                                                      sendBottle={sendBottle}/>)
+                                                      sendBottle={sendBottle} />);
     return (
-        <ul className="bottle-list">
-            { items }
-        </ul>
-    )
+        <>
+            {items.length == 0 ? (<div>ボトルはまだないです</div>) : (<ul className="bottle-list">{items}</ul>)}
+        </>
+    );
 }
