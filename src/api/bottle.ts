@@ -4,7 +4,7 @@ type subscribeBottlesHandler = (bottle: Bottle) => void
 
 const baseURL = 'https://binn-f890edff7f36.herokuapp.com'
 
-const pollInterval = 15000;
+const pollInterval = 30000;
 
 export namespace Api {
     let token: string
@@ -39,7 +39,6 @@ export namespace Api {
         return {id: data.id, msg: data.msg, expired_at: new Date(data.expired_at)};
     }
     export const sendBottle = async (bottle: Bottle): Promise<boolean> => {
-        console.log(bottle);
         const response = await fetch(baseURL+'/bottles',
             {
                 method: 'POST',
