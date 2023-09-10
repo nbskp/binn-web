@@ -2,7 +2,7 @@ import { Bottle } from '../model/Bottle';
 
 type subscribeBottlesHandler = (bottle: Bottle) => void
 
-const baseURL = 'http://localhost:8080'
+const baseURL = 'https://binn-f890edff7f36.herokuapp.com'
 
 const pollInterval = 15000;
 
