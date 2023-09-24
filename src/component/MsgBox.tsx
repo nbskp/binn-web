@@ -32,6 +32,7 @@ export const MsgBox: React.FC<MsgBoxProps> = ({ bottle, isEditable, changeMessag
                 onChange={ onChange }
                 rows={10}
                 borderRadius="8px"
+                fontSize="24px"
                 border={ isEditable ? "1px solid "+ Color.secondary : "1px solid #FFFFFF"}
                 width="100%"/>
         </Box>

@@ -42,6 +42,8 @@ function App() {
               <MsgBox bottle={ selectedBottle }
                       isEditable={ isEditable }
                       changeMessage={ changeMessage } />
+              <Spacer width="5%" />
+              <Box fontSize="12px">有効期限: { selectedBottle.expired_at.toLocaleString() }</Box>
               <Spacer size="5%" />
               <HStack>
                 <EditButton onClick={ editOnClick } />
