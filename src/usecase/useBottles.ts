@@ -3,9 +3,9 @@ import { Api } from '../api/bottle';
 import { Bottle } from '../model/Bottle';
 
 export type changeMessageHandler = (id: string, msg: string) => void
-export type sendBottleHandler = (id: string) => void
+export type SendBottleHandler = (id: string) => void
 
-export const useBottles = ():[Array<Bottle>,changeMessageHandler,sendBottleHandler] => {
+export const useBottles = ():[Array<Bottle>, changeMessageHandler, SendBottleHandler] => {
     const [bottles, setBottles] = useState<Array<Bottle>>([]);
     const removeBottle = (id: string) => {
         setBottles(bottles.filter((bottle: Bottle) => bottle.id != id));
@@ -22,7 +22,7 @@ export const useBottles = ():[Array<Bottle>,changeMessageHandler,sendBottleHandl
         setBottles(changed)
     }
 
-    const sendBottle: sendBottleHandler = async (id: string) => {
+    const sendBottle = async (id: string) => {
         if (await Api.sendBottle(bottles.filter((bottle: Bottle) => bottle.id == id)[0])) {
             removeBottle(id);
         }
