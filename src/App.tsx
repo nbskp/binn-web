@@ -35,14 +35,17 @@ function App() {
         <Spacer size="5%" horizontal />
         <Box bg={ Color.quanternary } height="80vh" width="2.5px" borderRadius="3px"></Box>
         <Spacer size="5%" horizontal />
-        <VStack width="60%">
+        <VStack width="60%" height="100%">
           { selectedBottle == null ?
             <Box>{"ボトルはまだないよ"}</Box> :
-            <Box>
-              <MsgBox bottle={ selectedBottle }
-                      isEditable={ isEditable }
-                      changeMessage={ changeMessage } />
-              <Spacer width="5%" />
+            <Box width="100%" height="100%">
+              <Spacer size="5%" />
+              <Box height="70%">
+                <MsgBox bottle={ selectedBottle }
+                        isEditable={ isEditable }
+                        changeMessage={ changeMessage } />
+              </Box>
+              <Spacer size="5%" />
               <Box fontSize="12px">有効期限: { selectedBottle.expired_at.toLocaleString() }</Box>
               <Spacer size="5%" />
               <HStack>
