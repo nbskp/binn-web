@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from "@kuma-ui/core";
 import { Color } from "../color";
 
@@ -7,9 +7,16 @@ type SendButtonProps = {
 }
 
 export const SendButton: React.FC<SendButtonProps> = ({ onClick }) => {
+    const [disabled, setDisabled] = useState<boolean>(false);
+    const _onClick = () => {
+        setDisabled(true);
+        onClick();
+        setDisabled(false);
+    }
     return (
         <Button
-            onClick={ onClick }
+            onClick={ _onClick }
+            disabled={ disabled }
             borderRadius="14px"
             p="16px 32px"
             fontWeight="600"
@@ -18,7 +25,7 @@ export const SendButton: React.FC<SendButtonProps> = ({ onClick }) => {
             }}
             textAlign="center"
             width="100%"
-            bg={ Color.primary }
+            bg={ disabled ? Color.secondary : Color.primary }
             color={ Color.tertiary }
         >
             送信
