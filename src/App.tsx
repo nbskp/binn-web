@@ -6,7 +6,7 @@ import { BottleTitleList } from './component/BottleTitleList';
 import { SendButton } from './component/SendButton';
 import { EditButton } from './component/EditButton';
 import { MsgBox } from './component/MsgBox';
-import { Flex, Box, VStack, HStack, Spacer } from '@kuma-ui/core';
+import { Flex, Box, Text, VStack, HStack, Spacer } from '@kuma-ui/core';
 import { Color } from './color';
 import './App.css';
 
@@ -39,7 +39,9 @@ function App() {
         <Spacer size="5%" horizontal />
         <VStack width="60%" height="100%">
           { selectedBottle == null ?
-            <Box>{"ボトルはまだないよ"}</Box> :
+            (<Flex width="100%" height="100%" justify="center" alignItems="center">
+              <Text textAlign="center" fontSize="24px">{"ボトルはまだないよ"}</Text>
+            </Flex>) :
             <Box width="100%" height="100%">
               <Spacer size="5%" />
               <Box height="70%">
