@@ -27,13 +27,15 @@ function App() {
   return (
     <Flex className="app" width="100%" height="100%" justify="center" alignItems="center">
       <HStack width="80%" height="80%">
-        <Box width="30%" height="100%">
+        <Box width="30%" height="90%">
+          <Spacer height="5%" />
           <BottleTitleList titles={ titles }
                            selectedBottleID={ selectedBottle == null ? null : selectedBottle.id }
                            selectBottle={ selectBottle }/>
+          <Spacer height="5%" />
         </Box>
         <Spacer size="5%" horizontal />
-        <Box bg={ Color.quanternary } height="80vh" width="2.5px" borderRadius="3px"></Box>
+        <Box bg={ Color.secondary } height="100%" width="2.5px" borderRadius="3px"></Box>
         <Spacer size="5%" horizontal />
         <VStack width="60%" height="100%">
           { selectedBottle == null ?
@@ -50,11 +52,12 @@ function App() {
               <Spacer size="5%" />
               <HStack>
                 <EditButton onClick={ editOnClick } />
-                <Spacer width="5%"/>
+                <Spacer width="5%" horizontal />
                 <SendButton onClick={ sendOnClick } />
               </HStack>
             </Box>
           }
+        <Spacer size="5%" />
         </VStack>
       </HStack>
     </Flex>
