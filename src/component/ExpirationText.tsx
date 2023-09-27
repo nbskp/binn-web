@@ -7,6 +7,6 @@ type ExpirationTextProps = {
 
 export const ExpirationText: React.FC<ExpirationTextProps> = ({ expiredAt }) => {
     return (
-        <Text justify="center" alignItems="center">{ '有効期限:' + expiredAt.toString() }</Text>
+        <Text>{ '有効期限:' + expiredAt.toString() }</Text>
     );
 };
